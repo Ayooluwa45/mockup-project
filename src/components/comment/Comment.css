@@ -1,21 +1,40 @@
 
-.container {
-    background-color: #fff;
-    color: #333;
-    border-radius: 15px;
-    padding: 40px 50px ;
-    margin: 20px 0;
-    position: relative;
-    width: 50%;
+.comments-container{
     display: grid;
-    grid-template-columns: auto;
-    gap: 5rem;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
    
   }
 
-  .comments {
-    display: flex;
-    justify-content: space-between;
+  .comment{
+    border-radius: 6px;
+    background-color: aliceblue;
+    overflow: hidden;
+    
    
   }
+
+  .title-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .comment-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 16px;
+    background-color: darkgray;
+  }
+
+  .comment-body{
+    padding: 16px;
+  }
+
+.text-title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100px;
+}
 
