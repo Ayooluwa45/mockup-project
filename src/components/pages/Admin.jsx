@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Admin() {
   return (
-    <div className='page'>Admin</div>
-  )
+    <div className="page">
+      <h2>Admin</h2>
+    </div>
+  );
 }
 
-export default Admin
+export default Admin;

@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Tasks() {
   return (
-    <div className='page'>Tasks</div>
-  )
+    <div className="page">
+      <h2>Tasks</h2>
+    </div>
+  );
 }
 
-export default Tasks
+export default Tasks;

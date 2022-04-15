@@ -4,51 +4,50 @@ import {Link} from 'react-router-dom'
 function Header() {
   return (
     <header className="header">
-    <div className='header-title'>
-      <div className='liveEo'>
-        <h2>LiveEO</h2>
-        <div className='header-item'>
-          <div className='header-items'>
+    
+      <div className='live'>
+      <Link to='/'>LiveEO</Link>
+        </div>
             <ul>
               <li>
-                <Link to='/'>
+                <Link to='/map'>
                   Map
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/tasks'>
                   Tasks
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/dashboard'>
                   Dashboard
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/comments'>
                   Comments
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/admin'>
                   Admin
                 </Link>
               </li>
               <li>
-                <Link to='/'>
+                <Link to='/l'>
                   L
                 </Link>
               </li>
             </ul>
 
-          </div>
+          
 
-        </div>
+        
 
-      </div>
+      
 
-    </div>
+    
     </header>
   );
 }
