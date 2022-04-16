@@ -10,8 +10,6 @@
     border-radius: 6px;
     background-color: aliceblue;
     overflow: hidden;
-    
-   
   }
 
   .title-container{
@@ -38,3 +36,41 @@
   width: 100px;
 }
 
+
+
+/*-------------MEDIA QUERIES.............*/
+@media screen and (max-width: 1024px) {
+  .container{
+    width: 700px;
+  }
+  .comments-container{
+   display: grid;
+   grid-template-columns: auto auto auto;
+      
+  }
+
+  .text-title{
+    width: 80px;
+  }
+  .comment-body{
+    padding: 10px;
+  }
+
+}
+
+
+/*-------------MEDIA QUERIES(small devices).............*/
+@media screen and (max-width: 600px) {
+    .container{
+      width: 450px;
+    }
+    .comments-container{
+     display: grid;
+     grid-template-columns: auto auto;
+     gap: 1rem;   
+    }
+    .title-container h2{
+      font-size: 15px;
+    }
+  
+}

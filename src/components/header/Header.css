@@ -6,8 +6,6 @@
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 60px;
    background-color: black;
- 
-  
   }
   .live{
     color: white;
@@ -38,6 +36,28 @@
     align-items: center;
     color: white;
   }
+
+  
+/*-------------MEDIA QUERIES.............*/
+@media screen and (max-width: 1024px) {
+  .header ul li {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+}
+
+
+/*-------------MEDIA QUERIES(small devices).............*/
+@media screen and (max-width: 600px) {
+  .header ul li {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  
+}
+
 
 
 /* .header {
