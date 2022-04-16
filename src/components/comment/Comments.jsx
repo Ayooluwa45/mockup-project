@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Comment.css";
 import Spinner from "../layout/Spinner";
 import CommentData from "../data/CommentData";
+import AddComment from "../data/AddComment";
 
 function Comments() {
   /*  const [name, setName] = useState('name');
@@ -15,6 +16,8 @@ function Comments() {
     fetchData();
   }, []);
 
+
+  // Get comment
   const fetchData = async () => {
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/comments"
@@ -23,7 +26,29 @@ function Comments() {
     setUsers(data);
     setLoading(false);
   };
+/* 
+// Creating Comment
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 
+
+
+
+
+
+
+  // Delete Comments
   const onDelete = async (id) => {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/users/${id}`,
@@ -39,6 +64,26 @@ function Comments() {
     );
   };
 
+  // Update Comment
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+ */
+
+
+
+
   if (!loading) {
     return (
       <div>
@@ -46,6 +91,7 @@ function Comments() {
           <h2>Comments</h2>
           <h2>Create comment</h2>
         </div>
+        <AddComment/>
         <div className="comments-container">
           {users.map((user) => (
             <CommentData key={user.id} user={user} />
