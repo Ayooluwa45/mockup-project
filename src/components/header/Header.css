@@ -23,6 +23,23 @@
 
   }
 
+  #admin{
+  border: 2px solid #e6e6e6;
+  padding: 2px;
+  border-radius: 5px;
+  }
+
+  #profile{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+ 
+  }
+
 
 
   
@@ -40,12 +57,40 @@
     color: white;
   }
 
+    
+.header ul li:hover {
+background-color: white;
+
+  
+}
+
+.header ul li:hover {
+  background: black;
+    
+  }
+
+  .header ul li .active {
+    background-color: white;
+    
+      
+    }
   
 /*-------------MEDIA QUERIES.............*/
 @media screen and (max-width: 1024px) {
   .header ul li {
     font-size: 15px;
     margin-left: 10px;
+  }
+
+  #profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .live a{
+    font-size: 18px;
+    font-weight: 700;
   }
 
 }
@@ -56,6 +101,16 @@
   .header ul li {
     font-size: 12px;
     margin-left: 10px;
+  }
+  #profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .live a{
+    font-size: 15px;
+    font-weight: 600;
   }
 
   
