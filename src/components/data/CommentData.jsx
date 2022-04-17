@@ -15,8 +15,8 @@ function CommentData({ user: { id, name, email, body,onDelete } }) {
         <span className="text-title">{email}</span>
       </div>
       <p className="comment-body">{body}</p>
-      <button>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
+     {/*  <button>Edit</button>
+      <button onClick={handleDelete}>Delete</button> */}
     </div>
   );
 }

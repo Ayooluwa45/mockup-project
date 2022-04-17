@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <div className="live">
         
-          <Link to="/map">LiveEO</Link>
+          <Link to="/live-eo">LiveEO</Link>
         
       </div>
       <ul>
@@ -20,12 +20,12 @@ function Header() {
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/comments">Comments</Link>
+          <Link to="/comments" className="active">Comments</Link>
         </li>
-        <li>
+        <li id="admin">
           <Link to="/admin">Admin</Link>
         </li>
-        <li>
+        <li id="profile">
           <Link to="/profile">L</Link>
         </li>
       </ul>

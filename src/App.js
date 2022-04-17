@@ -11,26 +11,23 @@ import Map from "./components/pages/Map";
 function App() {
   return (
     <>
-      <Router>
+      <div>
       
-        <div>
-        <Header />
+          <Router>
+          <Header />
           <Routes>
-            <Route path="/" element={<LiveEO />} />
+            <Route path="/live-eo" element={<LiveEO />} />
             <Route path="/map" element={<Map />} />
             <Route path="/tasks" element={<Tasks />} />
-            <Route path="/l" element={<Leave />} />
+            <Route path="/comments" element={<Comments />} />
+            <Route path="/profile" element={<Leave />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
+        </Router> 
+      </div>
+
        
-         
-        </div>
-      </Router>
-      <section className="container">
-            <Comments />
-        
-          </section>
     </>
   );
 }

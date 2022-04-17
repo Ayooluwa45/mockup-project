@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import {MdKeyboardArrowLeft} from 'react-icons/md'
+import {MdKeyboardArrowRight} from 'react-icons/md'
 import "./Comment.css";
 import Spinner from "../layout/Spinner";
 import CommentData from "../data/CommentData";
@@ -101,16 +103,16 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
           <h2>Comments</h2>
           <span>Create comment</span>
         </div>
-        <AddComment />
+       <AddComment /> 
         <div className="comments-container">{displayUsers}
         <ReactPaginate 
-        previousLabel= {'Previous'}
-        nextLabel={'Next'}
+        previousLabel= {<MdKeyboardArrowLeft/>}
+        nextLabel={<MdKeyboardArrowRight/>}
         pageCount={pageCount}
         onPageChange={changePage}
         containerClassName={'paginationBttns'}
-        previousLinkClassName={'previousBttn'}
-        nextLinkClassName={'nextBttn'}
+        previousLinkClassName={''}
+        nextLinkClassName={''}
         disabledClassName={'paginationDisabled'}
         activeClassName={'paginationActive'}
         />

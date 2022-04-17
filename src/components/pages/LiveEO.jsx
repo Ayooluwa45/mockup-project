@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function LiveEO() {
   return (
-    <div className='page'>LiveEO</div>
-  )
+    <div className="page">
+      <h2>LiveEO</h2>
+    </div>
+  );
 }
 
-export default LiveEO
+export default LiveEO;
