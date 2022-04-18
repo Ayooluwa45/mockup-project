@@ -28,9 +28,10 @@ function Comments() {
     setUsers(data);
     setLoading(false);
   };
-  /* 
+  
 // Creating Comment
-fetch('https://jsonplaceholder.typicode.com/posts', {
+const onAdd = async (title,body,userId)=>{
+  await fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
   body: JSON.stringify({
     title: 'foo',
@@ -41,14 +42,25 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((res) => {
+    if(res.status !== 201){
+      return
+    }else{
+      return res.json()
+    }
+  })
+  .then((data)=>{
+    setUsers((users)=>[...users, data])
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+}
 
 
 
 
-
-
+/* 
 
   // Delete Comments
   const onDelete = async (id) => {
@@ -102,7 +114,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
           <h2>Comments</h2>
           <span>Create comment</span>
         </div>
-       <AddComment /> 
+      {/*  <AddComment onAdd={onAdd}/>  */}
         <div className="comments-container">{displayUsers}
         <ReactPaginate 
         previousLabel= {<MdKeyboardArrowLeft/>}
