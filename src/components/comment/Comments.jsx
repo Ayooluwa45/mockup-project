@@ -12,7 +12,6 @@ function Comments() {
   const [email, setEmail] = useState('@gmail.com');
   const [para, setPara] = useState('lorem asdfghjklmnbvcxsdrftgzhuikm ysdfghjbvc'); */
   const [pageNumber, setPageNumber] = useState(0);
-
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 

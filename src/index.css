@@ -12,6 +12,7 @@ body {
   background-color: #fff;
   color: #000;
   line-height: 1.6;
+  cursor: pointer;
 }
 
 .container{

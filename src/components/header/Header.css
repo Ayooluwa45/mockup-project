@@ -58,15 +58,11 @@
   }
 
     
-.header ul li:hover {
-background-color: white;
 
-  
-}
 
 .header ul li:hover {
-  background: black;
-    
+  background-color: grey;  
+  transition:  all 800ms ease;  
   }
 
   .header ul li .active {
