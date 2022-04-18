@@ -49,27 +49,28 @@
     font-weight: 50%;
     
   }
-
  
+  
   .header ul li a {
     display: flex;
     align-items: center;
-    color: white;
+    color: white; 
+  
   }
 
-    
+  header ul li a.active,
+  header ul li a:hover{ 
+    color: grey; 
+    transition:  all 800ms ease;  
+    border-radius: 5px;
+    } 
 
-
-.header ul li:hover {
-  background-color: grey;  
-  transition:  all 800ms ease;  
-  }
-
-  .header ul li .active {
-    background-color: white;
-    
-      
+    .header ul li a.active{
+      background-color: #e6e6e6;
     }
+
+
+
   
 /*-------------MEDIA QUERIES.............*/
 @media screen and (max-width: 1024px) {
