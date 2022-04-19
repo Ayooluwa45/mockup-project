@@ -5,9 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="live">
-        
-          <Link to="/live-eo">LiveEO</Link>
-        
+        <Link to="/">LiveEO</Link>
       </div>
       <ul>
         <li>
@@ -20,13 +18,17 @@ function Header() {
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/comments" className="active" id="comments"> <p>Comments</p> </Link>
+          <Link to="/comments" className="active" id="comments">
+            <p>Comments</p>
+          </Link>
         </li>
         <li id="admin">
-          <Link to="/admin">Admin</Link>
+          <Link to="/admin"><p>Admin</p> </Link>
         </li>
         <li id="profile">
-          <Link to="/profile"><p>L</p></Link>
+          <Link to="/profile">
+            <p>L</p>
+          </Link>
         </li>
       </ul>
     </header>

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import {MdKeyboardArrowLeft} from 'react-icons/md'
-import {MdKeyboardArrowRight} from 'react-icons/md'
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import "./Comment.css";
 import Spinner from "../layout/Spinner";
 import CommentData from "../data/CommentData";
-import AddComment from "../data/AddComment";
+/* import AddComment from "../data/AddComment"; */
 import ReactPaginate from "react-paginate";
 
 function Comments() {
@@ -28,39 +28,36 @@ function Comments() {
     setUsers(data);
     setLoading(false);
   };
-  
-// Creating Comment
-const onAdd = async (title,body,userId)=>{
-  await fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((res) => {
-    if(res.status !== 201){
-      return
-    }else{
-      return res.json()
-    }
-  })
-  .then((data)=>{
-    setUsers((users)=>[...users, data])
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
-}
 
+  /* // Creating Comment
+  const onAdd = async (title, body, userId) => {
+    await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "foo",
+        body: "bar",
+        userId: 1,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((res) => {
+        if (res.status !== 201) {
+          return;
+        } else {
+          return res.json();
+        }
+      })
+      .then((data) => {
+        setUsers((users) => [...users, data]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }; */
 
-
-
-/* 
+  /* 
 
   // Delete Comments
   const onDelete = async (id) => {
@@ -102,10 +99,10 @@ const onAdd = async (title,body,userId)=>{
       return <CommentData key={user.id} user={user} />;
     });
 
-    const pageCount = Math.ceil(users.length / usersPerPage)
-    const changePage = ({selected})=>{
-      setPageNumber(selected)
-    }
+  const pageCount = Math.ceil(users.length / usersPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   if (!loading) {
     return (
@@ -114,22 +111,25 @@ const onAdd = async (title,body,userId)=>{
           <h2>Comments</h2>
           <span>Create comment</span>
         </div>
-      {/*  <AddComment onAdd={onAdd}/>  */}
-        <div className="comments-container">{displayUsers}
-        <ReactPaginate 
-        previousLabel= {<MdKeyboardArrowLeft/>}
-        nextLabel={<MdKeyboardArrowRight/>}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={'paginationContainer'}
-        previousLinkClassName={''}
-        nextLinkClassName={''}
-        disabledClassName={'paginationDisabled'}
-        activeClassName={'paginationActive'}
-        marginPageDisplayed={3}
-        pageRangeDisplayed={3}
-        pageClassName={'title-container'}
-        />
+        {/*  <AddComment onAdd={onAdd}/>  */}
+        <div className="comments-container">
+          {displayUsers}
+          <div className="pagination">
+          <ReactPaginate
+            previousLabel={<MdKeyboardArrowLeft id="icon"/>}
+            nextLabel={<MdKeyboardArrowRight id="icon"/>}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"pagination"}
+            previousLinkClassName={""}
+            nextLinkClassName={""}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+            marginPageDisplayed={3}
+            pageRangeDisplayed={3}
+            pageClassName={"title-container"}
+          />
+          </div>
         </div>
       </section>
     );

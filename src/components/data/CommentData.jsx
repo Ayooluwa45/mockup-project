@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
 
-
-function CommentData({ user: { id, name, email, body,onDelete } }) {
-  const handleDelete = () => {
+function CommentData({ user: { id, name, email, body } }) {
+  /* const handleDelete = () => {
     onDelete();
-  };
-
-
+  }; */
 
   return (
     <div className="comment">
@@ -15,7 +12,7 @@ function CommentData({ user: { id, name, email, body,onDelete } }) {
         <span className="text-title">{email}</span>
       </div>
       <p className="comment-body">{body}</p>
-     {/*  <button>Edit</button>
+      {/*  <button>Edit</button>
       <button onClick={handleDelete}>Delete</button> */}
     </div>
   );
