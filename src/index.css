@@ -100,7 +100,7 @@ h3 {
 
 
 /*-------------MEDIA QUERIES(small devices).............*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .backButton{
 margin: 10px;
   }
