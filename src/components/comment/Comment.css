@@ -58,6 +58,21 @@
   width: 100px;
 }
 
+.pagination{
+  display: flex;
+  justify-content: center;
+
+}
+
+#icon{
+  font-size: 20px;
+}
+
+.paginationActive{
+  border-radius: 3px;
+
+}
+
 /* 
 .paginationContainer{
   width: 100%;

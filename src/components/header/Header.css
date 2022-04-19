@@ -12,9 +12,9 @@
   .live a{
     color: white;
     font-size: 20px;
-    font-weight: 800;
-    
-}
+    font-weight: 800;  
+  }
+
   
   .header ul {
     display: flex;
@@ -40,6 +40,10 @@
     line-height: 0.8;
     font-size: 1.4rem;
   }
+  #profile:hover{
+    background-color: grey;
+    transition:  all 800ms ease; 
+  }
 
   #profile p{
     font-size: 20px;
@@ -50,6 +54,12 @@
     text-align: center;
   }
 
+  #admin p{
+    font-size: 20px;
+    padding: 1px 15px;
+    line-height: 1.1;
+  }
+
   #comments{
     background-color: white;
     color: #000;
@@ -57,6 +67,11 @@
     position: relative;
     line-height: 0.8;
     font-size: 1.4rem;
+  }
+
+  #comments:hover{
+    background-color: grey;
+    transition:  all 800ms ease; 
   }
 
   #comments p{
@@ -126,6 +141,11 @@
   #comments p{
     font-size: 0.8rem;
   }
+  #admin p{
+    font-size: 15px;
+    padding: 1px;
+    line-height: 0.9;
+  }
 
 }
 
@@ -154,6 +174,11 @@
   
   #comments p{
     font-size: 0.8rem;
+  }
+  #admin p{
+    font-size: 15px;
+    padding: 1px;
+    line-height: 0.9;
   }
 
   
