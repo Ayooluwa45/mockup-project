@@ -2,7 +2,7 @@ import React from "react";
 
 function Leave() {
   return (
-    <div className="page">
+    <div className="pages">
       <h2>L</h2>
     </div>
   );
