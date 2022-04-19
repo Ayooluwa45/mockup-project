@@ -60,8 +60,12 @@
 
 .pagination{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
 
+.paginationDisabled{
+ 
 }
 
 #icon{
@@ -69,8 +73,30 @@
 }
 
 .paginationActive{
-  border-radius: 3px;
+  border-radius: 80px;
+  padding: 8px;
+  background-color: aqua;
 
+}
+
+.previous, .next{
+  padding: 8px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.page{
+  padding: 8px;
+  width: 60px;
+  height: 60px;
+}
+
+.break{
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
 }
 
 /* 

@@ -114,23 +114,25 @@ function Comments() {
         {/*  <AddComment onAdd={onAdd}/>  */}
         <div className="comments-container">
           {displayUsers}
-          <div className="pagination">
+                 </div>
+                 
           <ReactPaginate
             previousLabel={<MdKeyboardArrowLeft id="icon"/>}
             nextLabel={<MdKeyboardArrowRight id="icon"/>}
             pageCount={pageCount}
             onPageChange={changePage}
             containerClassName={"pagination"}
-            previousLinkClassName={""}
-            nextLinkClassName={""}
+            previousLinkClassName={"previous"}
+            nextLinkClassName={"next"}
             disabledClassName={"paginationDisabled"}
             activeClassName={"paginationActive"}
             marginPageDisplayed={3}
             pageRangeDisplayed={3}
-            pageClassName={"title-container"}
+            pageClassName={"page"}
+            breakClassName={'break'}
           />
-          </div>
-        </div>
+      
+
       </section>
     );
   } else {
