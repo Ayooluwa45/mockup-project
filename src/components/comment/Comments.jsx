@@ -109,7 +109,7 @@ const onAdd = async (title,body,userId)=>{
 
   if (!loading) {
     return (
-      <section className="container">
+      <section className=" container">
         <div className="title-container">
           <h2>Comments</h2>
           <span>Create comment</span>
@@ -121,11 +121,14 @@ const onAdd = async (title,body,userId)=>{
         nextLabel={<MdKeyboardArrowRight/>}
         pageCount={pageCount}
         onPageChange={changePage}
-        containerClassName={'paginationBttns'}
+        containerClassName={'paginationContainer'}
         previousLinkClassName={''}
         nextLinkClassName={''}
         disabledClassName={'paginationDisabled'}
         activeClassName={'paginationActive'}
+        marginPageDisplayed={3}
+        pageRangeDisplayed={3}
+        pageClassName={'title-container'}
         />
         </div>
       </section>

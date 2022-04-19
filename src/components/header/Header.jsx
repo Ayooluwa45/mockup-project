@@ -20,13 +20,13 @@ function Header() {
           <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/comments" className="active">Comments</Link>
+          <Link to="/comments" className="active" id="comments"> <p>Comments</p> </Link>
         </li>
         <li id="admin">
           <Link to="/admin">Admin</Link>
         </li>
         <li id="profile">
-          <Link to="/profile">L</Link>
+          <Link to="/profile"><p>L</p></Link>
         </li>
       </ul>
     </header>
