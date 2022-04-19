@@ -7,6 +7,7 @@ import Dashboard from "./components/pages/Dashboard";
 import Leave from "./components/pages/Leave";
 import LiveEO from "./components/pages/LiveEO";
 import Map from "./components/pages/Map";
+import BackButton from "./components/layout/BackButton";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       
           <Router>
           <Header />
+          <BackButton url={'/'}/>
           <Routes>
-            <Route path="/live-eo" element={<LiveEO />} />
+            <Route path="/" element={<LiveEO />} />
             <Route path="/map" element={<Map />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/comments" element={<Comments />} />
